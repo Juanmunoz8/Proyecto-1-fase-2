@@ -1,0 +1,16 @@
+Para implementar un intérprete LISP para el subconjunto de instrucciones mencionadas, se pueden utilizar varias estructuras de datos del Java Collections Framework 
+para facilitar la manipulación y evaluación de expresiones. Aquí hay algunas sugerencias sobre cómo podrían utilizarse:
+
+HashMap para el entorno de variables y funciones: Podemos utilizar un HashMap para almacenar las variables y funciones definidas durante la ejecución del programa LISP. 
+Esto facilitará la búsqueda y asignación de valores a las variables, así como la definición y llamada de funciones.
+
+Stack para evaluar expresiones: Podemos usar una pila (Stack) para evaluar las expresiones LISP. Esto es útil para realizar operaciones como QUOTE, SETQ, COND, y el paso de parámetros.
+
+Lista enlazada para representar listas LISP: Podemos definir una clase para representar una lista enlazada, que es fundamental en LISP para representar las expresiones. 
+Esta lista enlazada puede contener elementos atómicos como números, variables o funciones, así como otras listas enlazadas.
+
+Enums para representar operadores y predicados: Podemos utilizar enums para representar los diferentes tipos de operadores y predicados en LISP. 
+Esto facilitará la identificación y manipulación de estas expresiones durante la evaluación.
+
+Al implementar el intérprete LISP, se utilizarán estas estructuras de datos junto con la lógica de evaluación para manejar las operaciones aritméticas, definición de funciones, predicados, condicionales, entre otros requisitos mencionados en el problema. 
+Las referencias para el uso de estas estructuras son las propias documentaciones de Java para HashMap, Stack, y las prácticas comunes en el diseño de intérpretes de lenguajes de programación.
