@@ -2,6 +2,7 @@ class LispInterpreter:
     """
     Clase para interpretar expresiones en Lisp.
     """
+
     def __init__(self):
         """
         Inicializa el entorno con las operaciones básicas.
