@@ -1,0 +1,26 @@
+import unittest
+from lisp_interpreter import LispInterpreter
+
+class TestLispInterpreter(unittest.TestCase):
+    def setUp(self):
+        self.interpreter = LispInterpreter()
+
+    def test_variable_definition(self):
+        self.interpreter.evaluate("(SETQ x 10)")
+        self.assertEqual(10, self.interpreter.variables['x'])
+
+    def test_function_definition_and_invocation(self):
+        self.interpreter.evaluate("(DEFUN square (x) (* x x))")
+        self.interpreter.evaluate("(SETQ result (square 5))")
+        self.assertEqual(25, self.interpreter.variables['result'])
+
+    def test_arithmetic_expression_evaluation(self):
+        self.assertEqual(15, self.interpreter.evaluate("(+ 10 5)"))
+        self.assertEqual(5, self.interpreter.evaluate("(- 10 5)"))
+        self.assertEqual(50, self.interpreter.evaluate("(* 10 5)"))
+        self.assertEqual(2, self.interpreter.evaluate("(/ 10 5)"))
+
+    # Otros métodos de prueba para COND, QUOTE, predicados, etc.
+
+if __name__ == '__main__':
+    unittest.main()
